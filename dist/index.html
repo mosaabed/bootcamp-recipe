@@ -11,8 +11,28 @@
 </head>
 
 <body>
-  
+    <input id = "inputId" type="text">
+    <button id="searchButton">search</button>
+    <div id = "mainDiv" ></div>
 
+
+    <script id="recipes-template" type="text/x-handlebars-template">
+        {{#each this}}
+           <div>
+            <a href={{href}}>{{title}}</a>
+           </div>
+           <div>
+            <img src={{thumbnail}} style="width:211px;height:247px;">
+           </div>
+           {{#each ingredients}}
+           <li>
+               <span>{{this}}</span>
+           </li>
+           {{/each}}
+        {{/each}}
+    </script>
+
+    <script src="Render.js"></script>
     <script src="./jquery/dist/jquery.js"></script>
     <script src="./handlebars/dist/handlebars.js"></script>
     <script src="main.js"></script>
