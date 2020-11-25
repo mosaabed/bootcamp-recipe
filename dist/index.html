@@ -19,16 +19,17 @@
     <script id="recipes-template" type="text/x-handlebars-template">
         {{#each this}}
            <div>
-            <a href={{href}}>{{title}}</a>
+            <a href={{href}} >{{title}}</a>
            </div>
            <div>
-            <img src={{thumbnail}} style="width:211px;height:247px;">
-           </div>
+            <img src={{thumbnail}}
+            style="width:211px;height:247px;" class = "imgClick" >
            {{#each ingredients}}
            <li>
-               <span>{{this}}</span>
+               <span >{{this}}</span>
            </li>
            {{/each}}
+        </div>
         {{/each}}
     </script>
 

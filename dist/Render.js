@@ -8,6 +8,6 @@ class Render
         const source = $("#recipes-template").html()
         const template = Handlebars.compile(source)
         let newHtml = template(data)
-        $("#mainDiv").append(newHtml)
+        $("#mainDiv").empty().append(newHtml)
     }
 }
